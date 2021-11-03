@@ -3,8 +3,8 @@ from datetime import datetime
 def lambda_handler(event, context):
 #Creating Session With Boto3.
     session = boto3.Session()
-    #aws_access_key_id='AKIA4M7RQWRGR35KVXEW',
-   # aws_secret_access_key='AUwxPeMtYaGCzrgF/eMUt617nkXy9ZeLUtmePORS'
+    #aws_access_key_id='YOur_key',
+   # aws_secret_access_key='YOur_key'
     
 
 #Creating S3 Resource From the Session.
