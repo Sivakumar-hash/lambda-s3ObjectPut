@@ -30,4 +30,4 @@ Select “S3 object read-only permissions from Policy templates drop down
 Attach polices “AmazonS3FullAccess” (you will need this to be able to write to the S3
 bucket
 
-Go to lambda and add the code that i have mention above with filename ""
+Go to lambda and add the code that i have mention above with filename "lambda-s3_current_time" > deploy the change and run after that u will see the current time and hello world in content of file.
