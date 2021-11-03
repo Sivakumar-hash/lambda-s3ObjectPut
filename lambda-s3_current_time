@@ -1,0 +1,36 @@
+import boto3
+from datetime import datetime
+def lambda_handler(event, context):
+#Creating Session With Boto3.
+    session = boto3.Session()
+    #aws_access_key_id='AKIA4M7RQWRGR35KVXEW',
+   # aws_secret_access_key='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'
+    
+
+#Creating S3 Resource From the Session.
+    s3 = session.resource("s3")
+    
+    object = s3.Object('test9812', 'index.html')
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    t = {"Data":{"current_time":current_time}}
+    
+    
+    content_data = current_time +'\tHello world'
+
+    
+    
+    result = object.put(Body=content_data)
+    
+  
+    
+    res = result.get('ResponseMetadata')
+    
+
+    if res.get('HTTPStatusCode') == 200:
+            print('File Uploaded Successfully')
+    else:
+            print('File Not Uploaded')
+            
+    
+    
