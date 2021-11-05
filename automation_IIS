@@ -6,7 +6,7 @@
 # * YOU MAY HAVE TO RUN THIS COMMAND PRIOR TO RUNNING THIS SCRIPT!
 
 
-Set-ExecutionPolicy Bypass -Scope Process
+Set-ExecutionPolicy  RemoteSigned
 
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServerRole
 Enable-WindowsOptionalFeature -Online -FeatureName IIS-WebServer
